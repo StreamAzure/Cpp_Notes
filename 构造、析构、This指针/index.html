@@ -718,18 +718,16 @@
 <p>当一个成员函数/数据成员没有声明在某个访问控制关键字下时，默认为<code>private</code>。因此通常来说不必显式使用<code>private</code>。</p>
 <h4 id="_4"><strong>类的大小</strong></h4>
 <ul>
-<li>
-<p>char为1字节，short为2字节，int为4字节，double为8字节。</p>
-</li>
-<li>
-<p>当类的属性中存在多种类型的变量时，由于存在<strong>内存对齐</strong>，<strong>变量声明顺序会影响类的大小</strong>。</p>
-</li>
-<li>
-<p>如果一个属性都没有，<strong>只有成员函数</strong>，由于成员函数不占类的大小，<strong>类的大小为1字节作为占位</strong>。</p>
-</li>
-<li>
-<p>但如果方法是<strong>虚函数</strong>，由于虚函数本身是个指针，<strong>占4字节</strong>。（详见“多态”章）</p>
-</li>
+<li>char为1字节，short为2字节，int为4字节，double为8字节。</li>
+</ul>
+<ul>
+<li>当类的属性中存在多种类型的变量时，由于存在<strong>内存对齐</strong>，<strong>变量声明顺序会影响类的大小</strong>。</li>
+</ul>
+<ul>
+<li>如果一个属性都没有，<strong>只有成员函数</strong>，由于成员函数不占类的大小，<strong>类的大小为1字节作为占位</strong>。</li>
+</ul>
+<ul>
+<li>但如果方法是<strong>虚函数</strong>，由于虚函数本身是个指针，<strong>占4字节</strong>。（详见“多态”章）</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">base1</span><span class="p">{</span>
 <span class="k">private</span><span class="o">:</span>
@@ -758,8 +756,8 @@
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li>默认构造函数：</li>
-</ul>
+<li>
+<p>默认构造函数：</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// 写法1：</span>
 <span class="n">Student</span><span class="p">(){</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -767,9 +765,11 @@
 <span class="c1">// 写法2：</span>
 <span class="n">Student</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">id</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<ul>
-<li>含参构造函数</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>含参构造函数</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// 写法1：</span>
 <span class="n">Student</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">_id</span><span class="p">){</span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_id</span><span class="p">;</span>
@@ -777,19 +777,23 @@
 <span class="c1">// 写法2：</span>
 <span class="n">Student</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">id</span><span class="p">(</span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<ul>
-<li>拷贝构造函数</li>
+</li>
 </ul>
+<ul>
+<li>
+<p>拷贝构造函数</p>
 <div class="highlight"><pre><span></span><code><span class="n">Student</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Student</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">//const表示s的值不能被修改</span>
 <span class="w">  </span><span class="c1">//即保证被拷贝对象的值不会被修改</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+</li>
+</ul>
 <h4 id="_8">其他细节</h4>
 <ul>
-<li>构造函数是可重载的，即可以有若干个含参构造函数。</li>
-</ul>
+<li>
+<p>构造函数是可重载的，即可以有若干个含参构造函数。</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
@@ -801,11 +805,15 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
+</li>
+</ul>
 <ul>
-<li>构造函数的手动定义与自动定义</li>
+<li>构造函数的手动定义与自动定义<ul>
 <li>如果没有定义任意一个构造函数，编译器会自动定义三个函数：默认构造函数、拷贝构造函数、析构函数</li>
 <li>但如果已经定义<strong>含参构造函数</strong>或<strong>拷贝构造函数</strong>的任意一个，其他构造函数不会被自动定义，即此时不能直接调用默认构造函数。</li>
 <li><strong>解决方法：无论什么时候都要记得自己定义一个默认构造函数。</strong></li>
+</ul>
+</li>
 </ul>
 <h4 id="_9">浅拷贝及可能造成的问题</h4>
 <p>如果在默认构造函数中，以<code>new</code>为变量<code>buff</code>申请堆上的空间，而后又进行了类对象的拷贝（即调用拷贝构造函数），新的对象会自动申请新的内存空间吗？</p>
