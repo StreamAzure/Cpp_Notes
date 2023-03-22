@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../%E9%9D%99%E6%80%81%E3%80%81%E5%8F%8B%E5%85%83/">
+        <link rel="prev" href="../%E5%A4%9A%E6%80%81/">
       
       
-        <link rel="next" href="../%E7%BB%A7%E6%89%BF/">
+        <link rel="next" href="../Map/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>运算符重载 - C++ 从入门到入土 全程笔记</title>
+        <title>Vector - C++ 从入门到入土 全程笔记</title>
       
     
     
@@ -107,6 +107,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vector" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -138,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              运算符重载
+              Vector
             
           </span>
         </div>
@@ -237,16 +242,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -255,7 +258,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           第一章：类
@@ -294,19 +297,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" class="md-nav__link">
         运算符重载
       </a>
-      
     </li>
   
 
@@ -352,14 +347,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -368,7 +365,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           第二章：STL
@@ -379,11 +376,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Vector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vector
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Vector
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    重要迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    容量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    面试问题
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -426,6 +492,51 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    重要迭代器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    容量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    面试问题
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -440,9 +551,148 @@
                   
 
 
-  <h1>运算符重载</h1>
-
-
+<h1 id="vector">Vector</h1>
+<h2 id="_1">迭代器</h2>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Alloc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alloc</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">vector</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">tpyedef</span><span class="w"> </span><span class="n">T</span><span class="w">           </span><span class="n">value_type</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">value_type</span><span class="o">*</span><span class="w"> </span><span class="n">iterator</span><span class="p">;</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Vector的迭代器是<strong>随机访问迭代器</strong></p>
+<p>Vector的迭代器本质上就是<strong>普通指针</strong>。例如：</p>
+<ul>
+<li><code>vector&lt;int&gt;::iterator ivite;</code>中，<code>ivite</code>的类型是<code>int*</code>；</li>
+<li><code>vector&lt;Shape&gt;::iterator svite;</code>中，<code>svite</code>的类型是<code>Shape*</code></li>
+</ul>
+<h2 id="_2">重要迭代器</h2>
+<p><code>vector</code>的成员迭代器：</p>
+<ul>
+<li><code>start</code>：当前使用空间的首个元素</li>
+<li>即<code>vec.begin()</code>的返回值</li>
+<li><code>finish</code>：当前使用空间的末尾元素</li>
+<li>即<code>vec.end()</code>的返回值</li>
+<li><code>end_of_storage</code>：当前可用空间的最末位置</li>
+</ul>
+<h2 id="_3">容量</h2>
+<ul>
+<li><strong>vector 实际配置的大小比使用者需求量更大</strong>一些，即一个 vector 的<strong>容量</strong>永远大于或等于其大小。</li>
+<li>
+<p>初始化时，大小=容量=初始化的元素个数</p>
+</li>
+<li>
+<p>当容量=大小，且有新增元素时，容量翻倍；若翻倍后还不够，就扩张到足够大</p>
+</li>
+<li>容量的扩张过程：实际上就是动态数组扩张的过程，即<strong>重新申请内存、移动元素、释放原内存</strong></li>
+<li>一旦对 vector 的操作引起容量扩张，则原有的 vector 迭代器全部失效</li>
+<li>若使用<code>pop_back()</code>、<code>clear()</code>等删除元素，容量保持不变</li>
+</ul>
+<h2 id="_4">操作</h2>
+<ul>
+<li>
+<p><strong>pop_back()</strong></p>
+</li>
+<li>
+<p>删除最末尾的元素</p>
+</li>
+<li>
+<p><strong>earse(iterator position)</strong></p>
+</li>
+<li>
+<p>删除由迭代器指定的某个位置的元素</p>
+</li>
+<li>执行删除操作后，迭代器自动自增指向下一个元素。</li>
+<li>
+<p><strong>clear()</strong></p>
+</li>
+<li>
+<p>实际调用的是<code>erase()</code></p>
+</li>
+<li>
+<p><strong>insert()</strong></p>
+</li>
+<li>
+<p>情况一：插入元素不会超出 vector 容量</p>
+<p>如果要<strong>移动的元素个数＞插入的元素个数</strong>：设插入点迭代器为<code>pos</code>，则从 pos 开始的后面元素都右移 x 个位置，并修改<code>finish</code>迭代器；再在<code>pos</code>位置填充插入的元素。</p>
+<p>如果要<strong>移动的元素个数 ≤ 插入的元素个数</strong>：先用<strong>多出来那些插入元素</strong>填充“应该在且可以在”的位置，再将 pos 开始的后面元素“跳跃式”地拷贝到插入元素后的空间；再在<code>pos</code>位置后腾出来的空间填充插入的元素。</p>
+</li>
+<li>
+<p>情况二：插入元素会超出 vector 容量</p>
+<p>直接申请新的内存空间，pos 开始的后面元素直接拷贝到对应位置，再直接在<code>pos</code>位置填充插入的元素</p>
+</li>
+</ul>
+<h2 id="_5">面试问题</h2>
+<ol>
+<li>
+<p><strong>vector 中插入一万个数据如何提高效率？再把这一万个数据清掉后内存如何变化？</strong></p>
+</li>
+<li>
+<p>提前申请好内存：<code>vec.reserve</code>，避免重新分配和数据复制</p>
+</li>
+<li>
+<p>使用 C++11 特性：<code>emplace_back()</code>，减少对象拷贝和构造次数</p>
+</li>
+<li>
+<p><strong>vector 和 list 有什么区别？</strong></p>
+</li>
+<li>
+<p><strong>为什么 vector 容量扩张时是 1.5 倍或 2 倍？</strong></p>
+</li>
+</ol>
+<p>https://blog.csdn.net/qq_44918090/article/details/120583540</p>
+<p>其实 2 倍不如 1.5 倍好，但至少能够保证 push_back 操作的均摊时间复杂度为 O(1)</p>
+<p>1.5 倍是最好的，因为能够<strong>增大“重新使用之前释放掉的内存空间”的可能性</strong>。如果之间释放掉的空间通过新的分配又被vector再次使用了，且这部分空间对应的 Cache（如TLB等）还未被替换掉，就意味着这部分空间的缓存命中仍然可以保持。</p>
+<p>要<strong>增大上述可能性</strong>，就要求扩张的倍数能尽量使得<strong>前一次释放的内存大小+紧邻的可能空闲的后续内存大小 ≥ 本次要申请的内存大小</strong>。而每次 1.5 倍的容量扩张有助于这一点。上述情况是最坏情况。在最好情况下，每次释放的内存恰好是连续分布的，更能轻松满足本次要申请的内存大小，达到复用内存（从而复用已有的可能还未被替换的Cache）的目的。</p>
+<ol>
+<li>
+<p><strong>什么情况下 vector 迭代器失效？</strong></p>
+</li>
+<li>
+<p>若超出容量，则全部迭代器失效（因为重新申请内存空间）</p>
+</li>
+<li>
+<p>末尾插入元素<code>push_back()</code>，未超出容量，则只有<code>finish</code>/<code>vec.end()</code>失效。</p>
+<p><strong>为什么说它会失效？见下面的例子：</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span>
+<span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>for</code>循环永远不会结束，因为<code>push_back</code>使得<code>vec.end()</code>始终是失效状态，不能正确地指示一个末尾位置。</p>
+</li>
+<li>
+<p>末尾删除元素，<code>vec.end()</code>失效，原因同上。</p>
+</li>
+<li>
+<p>中间插入元素<code>insert(pos, n)</code>，未超出容量，则插入点<code>pos</code>及以后的迭代器都失效。</p>
+</li>
+<li>
+<p>中间删除元素，删除点<code>pos</code>及以后的迭代器都失效，原因同上。</p>
+<p>例如以下代码，执行<code>erase</code>删除第一个 2 后，<code>it</code>自动自增指向第二个2，而后 for 循环执行<code>it++</code>，<code>it</code>指向第三个 2 ，然后删除，并自动自增指向第四个 2， 而后 for 循环执行<code>it++</code>，指向 6</p>
+<p>即循环结束后最终被删除的只有第一和第三个2，仍有 2 未被删除。</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="n">nums</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>使用迭代器循环，如何安全删除vector中满足给定条件的元素？</strong></p>
+</li>
+</ol>
+<p>为了让迭代器只通过 for 循环自增，抵消<code>erase</code>的自增操作即可，即：</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="n">nums</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="n">it</span><span class="w"> </span><span class="o">--</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
